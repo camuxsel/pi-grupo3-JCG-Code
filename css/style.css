@@ -6,6 +6,12 @@ body {
     background-color: rgba(73, 72, 75, 0.953);
 }
 
+a, ul, ol, li {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+
 /*Condiciones del header*/
 .header {
     background-color: black;
