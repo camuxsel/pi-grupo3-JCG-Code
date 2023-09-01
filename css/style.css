@@ -1,3 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
     background-color: rgba(73, 72, 75, 0.953);
+}
+
+a, ul, ol, li {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+
+/*Condiciones del header*/
+.header {
+    background-color: black;
+}
+
+.navListHeader {
+   display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ulNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0%;
+}
+
+.liNav {
+    display: flex;
+    height: auto;
+    padding: 10% 15%;
+    margin: 10% 15%
 }
