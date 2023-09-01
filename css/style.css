@@ -60,4 +60,14 @@ footer{
         color: white;
         font-size:medium;
     }
+    @media(max-width: 420px){
+        .lista-footer{
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+        }
+        .nombres{
+            padding-bottom: 5px;
+        }
+    }
     
