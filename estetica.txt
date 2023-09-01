@@ -1,6 +1,2 @@
-holaaaaaaaaaaaaaaaaaaaa, agrego el txt para poner especificaciones de la estetica. 
-
-
-okis me encantoooooooooooo
-
-chau
+ violeta : rgba(57, 8, 103, 0.762);
+ gris :rgba(73, 72, 75, 0.953)
