@@ -15,12 +15,24 @@ a, ul, ol, li {
 /*Condiciones del header*/
 .header {
     background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo{
+    width: 33%;
+}
+
+.imgHeader {
+    width: 150px;
+    margin: 1% 2%;
 }
 
 .navListHeader {
-   display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
+    width: 33%;
 }
 
 .ulNav {
@@ -35,4 +47,8 @@ a, ul, ol, li {
     height: auto;
     padding: 10% 15%;
     margin: 10% 15%
+}
+
+.form {
+    width: 33%;
 }
