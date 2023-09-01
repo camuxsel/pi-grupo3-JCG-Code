@@ -48,7 +48,16 @@ a, ul, ol, li {
     padding: 10% 15%;
     margin: 10% 15%
 }
-
-.form {
-    width: 33%;
-}
+footer{
+    background-color: black;
+    }
+    .lista-footer{
+        display:flex ;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 2%;
+        color: white;
+        font-size:medium;
+    }
+    
