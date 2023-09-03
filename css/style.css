@@ -95,6 +95,7 @@ footer{
     flex-wrap: wrap;
     margin: 0px;
     width: fit-content;
+    width: 100%;
 }
    
 
@@ -103,11 +104,51 @@ footer{
     background-color: black;
     border: 1px solid rgba(57, 8, 103, 0.762);
     padding: 3%;
-    width: 40%;
+    width: 30%;
     margin: 1%;
     flex-direction: row;
     justify-content: center;
 }
+/*Main de index*/
+.lista-completa-home{
+
+}
+.lista-pelis-populares{
+    display: block;
+}
+
+.sec-peliculas-populares{
+
+}
+.sec-lista-art{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;  
+    justify-content: space-around;
+    width: 100%;
+}
+.art-home{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin: 10px 0px;
+    background-color: #666;
+    height: 80vh;
+    margin: 0;
+}
+.art-home img{
+height: 68vh;
+width: 90%;
+align-self: center;
+justify-content: center;
+}
+.art-home h3{
+    margin: ;
+}
+/* hasta aca*/
 
 /* Propiedades para dispositivo móvil*/
 
