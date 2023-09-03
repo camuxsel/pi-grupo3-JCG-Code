@@ -11,6 +11,7 @@ a, ul, ol, li {
     list-style-type: none;
     text-decoration: none;
     color: white;
+    padding: 0px;
 }
 
 /*Condiciones del header*/
@@ -75,6 +76,75 @@ footer{
     width: fit-content;
     border: 0px;
     margin: 0px 20px;
+}
+
+
+/*Condiciones para main de pelicula.html*/
+.sectionPeli { 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.imgPelicula {
+    margin: 4px;
+    width: 30%;
+}
+
+.ulPeli {
+    width: 69%;
+    margin: 0;
+    padding: 0% 2%;
+}
+.h1Barbie {
+    display: flex;
+    color: #e73ac8;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.h2Barbie {
+    display: block;
+    color: aliceblue;
+    flex-direction: row;
+    font-size: 124%;
+    font-weight: 200;
+}
+
+.h3Barbie {
+    font-weight: 200;
+
+}
+/* Otras propiedades */
+.generos{
+    color: white;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lista-g{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0px;
+    width: fit-content;
+}
+   
+
+.lista-generos{
+    display: flex;
+    background-color: black;
+    border: 1px solid rgba(57, 8, 103, 0.762);
+    padding: 3%;
+    width: 40%;
+    margin: 1%;
+    flex-direction: row;
+    justify-content: center;
 }
 
 
