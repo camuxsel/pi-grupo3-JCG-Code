@@ -11,6 +11,7 @@ a, ul, ol, li {
     list-style-type: none;
     text-decoration: none;
     color: white;
+    padding: 0px;
 }
 
 /*Condiciones del header*/
@@ -73,6 +74,39 @@ footer{
     width: fit-content;
     border: 0px;
     margin: 0px 20px;
+}
+
+/* Otras propiedades */
+.generos{
+    color: white;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lista-g{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0px;
+    width: fit-content;
+}
+   
+
+.lista-generos{
+    display: flex;
+    background-color: black;
+    border: 1px solid rgba(57, 8, 103, 0.762);
+    padding: 3%;
+    width: 40%;
+    margin: 1%;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /* Propiedades para dispositivo móvil*/
