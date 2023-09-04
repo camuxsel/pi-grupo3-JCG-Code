@@ -111,6 +111,14 @@ footer{
     font-weight: 200;
 }
 
+.h3Barbie {
+    font-weight: 200;
+
+}
+/*Fin de peliculas*/
+
+
+
 /* Propiedades de generos.html */
 .generos{
     color: white;
@@ -140,6 +148,9 @@ footer{
     justify-content: center;
     width: 30%;
 }
+
+/*Propiedades detalle genero */
+
 
 /*Main de index*/
 .sec-home h2{
@@ -175,15 +186,9 @@ align-self: center;
 justify-content: center;
 }
 .art-home h3{
-    color: white;
 }
-
 /* hasta aca*/
 
-.h3Barbie {
-    font-weight: 200;
-
-}
 /* Propiedades para dispositivo móvil*/
 
 @media(max-width: 420px) {
@@ -228,7 +233,6 @@ justify-content: center;
         height: 80vh;
         margin: 2% 0 2% 0;
     }
-        
     /*hasta aca*/
 
     /*Generos*/
