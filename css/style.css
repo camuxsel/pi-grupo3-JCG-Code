@@ -116,6 +116,7 @@ h1, h2, h3 {
 .liPelicula {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 .imgEstrella {
