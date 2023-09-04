@@ -81,6 +81,9 @@ footer{
 
 
 /*Condiciones para main de pelicula.html*/
+h1, h2, h3 {
+    font-weight: 200;
+}
 .sectionPeli { 
     display: flex;
     flex-wrap: wrap;
@@ -108,12 +111,20 @@ footer{
     color: aliceblue;
     flex-direction: row;
     font-size: 124%;
-    font-weight: 200;
 }
 
-.h3Barbie {
-    font-weight: 200;
+.liPelicula {
+    display: flex;
+    flex-direction: row;
+}
 
+.imgEstrella {
+    width: 4%;
+}
+
+.imgMargot {
+    width: 10%;
+    border-radius: 63%
 }
 /*Fin de peliculas*/
 
