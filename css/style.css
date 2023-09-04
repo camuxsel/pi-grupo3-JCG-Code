@@ -160,6 +160,9 @@ h1, h2, h3 {
     width: 30%;
 }
 
+/*Propiedades detalle genero */
+
+
 /*Main de index*/
 .sec-home h2{
     color: white;
@@ -194,12 +197,13 @@ align-self: center;
 justify-content: center;
 }
 .art-home h3{
+    color: white;
 }
 /* hasta aca*/
 
 /* Propiedades para dispositivo móvil*/
 
-@media(max-width: 420px){
+@media(max-width: 420px) {
     /*Header*/
     .header{
         flex-direction: column;
@@ -240,6 +244,7 @@ justify-content: center;
         border: 3px solid rgb(57 8 103 / 42%);
         height: 80vh;
         margin: 2% 0 2% 0;
+    }
     /*hasta aca*/
 
     /*Generos*/
