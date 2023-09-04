@@ -11,6 +11,7 @@ a, ul, ol, li {
     list-style-type: none;
     text-decoration: none;
     color: white;
+    padding: 0px;
 }
 
 /*Condiciones del header*/
@@ -46,13 +47,14 @@ a, ul, ol, li {
     flex-direction: row;
     justify-content: space-around;
     padding: 0%;
+    margin: 0px;
 }
 
 .liNav {
     display: flex;
     height: auto;
     padding: 10% 15%;
-    margin: 10% 15%
+    margin: 5% 15%
 }
 
 /*Condiciones del footer*/
@@ -65,7 +67,7 @@ footer{
     flex-direction: row;
     justify-content: center;
     list-style-type: none;
-    padding: 2%;
+    padding: 1%;
     color: white;
     font-size: medium;
     border: 3px solid rgba(57, 8, 103, 0.762);
@@ -76,66 +78,6 @@ footer{
     border: 0px;
     margin: 0px 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*Condiciones para main de pelicula.html*/
@@ -165,30 +107,40 @@ footer{
     display: block;
     color: aliceblue;
     flex-direction: row;
-<<<<<<< HEAD
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    font-size: 124%;
+    font-weight: 200;
+}
+
+/* Propiedades de generos.html */
+.generos{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+}
+
+.titulo{
     margin: 0px;
-    width: fit-content;
+}
+
+.lista-g{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
 }
-   
 
 .lista-generos{
     display: flex;
-    background-color: black;
-    border: 1px solid rgba(57, 8, 103, 0.762);
-    padding: 3%;
-    width: 30%;
     margin: 1%;
-    flex-direction: row;
+    background-color: black;
+    border: 2px solid rgba(57, 8, 103, 0.762);
+    padding: 2%;
     justify-content: center;
-=======
-    font-size: 124%;
-    font-weight: 200;
->>>>>>> 43f1fc60138c619c1b8ccf8f0121f259fcac856e
+    width: 30%;
 }
+
 /*Main de index*/
 .lista-completa-home{
 
@@ -226,7 +178,6 @@ align-self: center;
 justify-content: center;
 }
 .art-home h3{
-    margin: ;
 }
 /* hasta aca*/
 
@@ -237,6 +188,7 @@ justify-content: center;
 /* Propiedades para dispositivo móvil*/
 
 @media(max-width: 420px){
+    /*Header*/
     .header{
         flex-direction: column;
     }
@@ -244,7 +196,7 @@ justify-content: center;
     .logo{
         width: fit-content;
     }
-
+    /*Footer*/
     .lista-footer{
         flex-direction: column;
         justify-content: center;
@@ -254,6 +206,15 @@ justify-content: center;
     .nombres{
         padding-bottom: 5px;
         width: fit-content;
+    }
+
+    /*Generos*/
+    .lista-g{
+        flex-direction: column;
+    }
+
+    .lista-generos{
+        width: 95%;
     }
 }
     
