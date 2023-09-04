@@ -150,13 +150,17 @@ footer{
 }
 
 /*Main de index*/
-.lista-pelis-populares{
-    display: block;
+.sec-home h2{
+    color: white;
+    margin-bottom: 0;
+    margin-left: 1.9%;
 }
-
+.sec-lista-art a{
+    width: 30%;
+}
 .sec-lista-art{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;  
     justify-content: space-around;
     width: 100%;
@@ -167,11 +171,10 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    margin: 10px 0px;
     background-color: #666;
+    border: 3px solid rgb(57 8 103 / 42%);
     height: 80vh;
-    margin: 0;
+    margin: 2% 0 2% 0;
 }
 .art-home img{
 height: 68vh;
@@ -179,7 +182,8 @@ width: 90%;
 align-self: center;
 justify-content: center;
 }
-
+.art-home h3{
+}
 /* hasta aca*/
 
 /* Propiedades para dispositivo móvil*/
@@ -204,6 +208,28 @@ justify-content: center;
         padding-bottom: 5px;
         width: fit-content;
     }
+    /*Main del index*/
+    .sec-home a{
+        width: 100%;
+    }
+    .sec-home h2{
+        font-size: xx-large;
+    }
+    .sec-home h3{
+        font-size: xx-large;
+        margin: 4% 4% 0 4%;
+    }
+    .art-home{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #666;
+        border: 3px solid rgb(57 8 103 / 42%);
+        height: 80vh;
+        margin: 2% 0 2% 0;
+    /*hasta aca*/
 
     /*Generos*/
     .lista-g{
@@ -214,4 +240,3 @@ justify-content: center;
         width: 95%;
     }
 }
-    
