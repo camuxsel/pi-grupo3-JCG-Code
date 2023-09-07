@@ -104,6 +104,9 @@ h1, h2, h3 {
     color: #e73ac8;
     flex-direction: column;
     justify-content: flex-start;
+    margin: 2% 0% 0%;
+    font-size: 205%;
+
 }
 
 .h2Barbie {
@@ -111,6 +114,7 @@ h1, h2, h3 {
     color: aliceblue;
     flex-direction: row;
     font-size: 124%;
+    margin: 0%;
 }
 
 .liPelicula {
@@ -123,10 +127,15 @@ h1, h2, h3 {
     width: 4%;
 }
 
-.imgMargot {
-    width: 10%;
-    border-radius: 63%
+.ulBarbie {
+    display: flex;
+    flex-direction: row;
 }
+
+.generoB {
+    padding: 1%;
+}
+
 /*Fin de peliculas*/
 
 
