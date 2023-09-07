@@ -299,4 +299,9 @@ justify-content: center;
     .lista-generos{
         width: 95%;
     }
+
+    /*Pelicula*/
+    .ulPeli {
+        width: fit-content;
+    }
 }
