@@ -110,11 +110,12 @@ h1, h2, h3 {
 }
 
 .h2Barbie {
-    display: block;
+    display: flex;
     color: aliceblue;
     flex-direction: row;
     font-size: 124%;
     margin: 0%;
+    align-items: center;
 }
 
 .liPelicula {
@@ -196,6 +197,12 @@ h1, h2, h3 {
     display: flex;
     flex-direction: row;
     width: 100%;
+    flex-wrap: wrap;
+}
+
+.lista-genero{
+    margin: 0% 1%;
+    width: 23%;
 }
 
 .art-genero{
@@ -209,6 +216,7 @@ h1, h2, h3 {
 
 .img-genero{
     width: 90%;
+    padding-top: 5%;
 }
 
 /*Main de index*/
@@ -255,6 +263,7 @@ justify-content: center;
     /*Header*/
     .header{
         flex-direction: column;
+        margin: 0%;
     }
 
     .logo{
@@ -302,6 +311,17 @@ justify-content: center;
 
     .lista-generos{
         width: 95%;
+    }
+
+    /* Detalle-genero*/
+    .listado-genero{
+        justify-content: center;
+        margin: 0%;
+    }
+
+    .lista-genero{
+        width: 90%;
+        margin: 4%;
     }
 
     /*Pelicula*/
