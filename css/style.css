@@ -275,6 +275,12 @@ justify-content: center;
     .logo{
         width: fit-content;
     }
+
+    .ulNav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     /*Footer*/
     .lista-footer{
         flex-direction: column;
