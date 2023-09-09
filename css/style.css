@@ -121,6 +121,10 @@ footer{
     align-items: center;
 }
 
+.h3Barbie{
+    font-weight: 100;
+}
+
 .liPelicula {
     display: flex;
     flex-direction: row;
@@ -336,8 +340,12 @@ justify-content: center;
         margin: 4%;
     }
 
-    /*Pelicula*/
+    /*Pelicula.html*/
     .ulPeli {
         width: fit-content;
+    }
+
+    .imgPelicula {
+        float: left;
     }
 }
