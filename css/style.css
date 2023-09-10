@@ -296,6 +296,17 @@ justify-content: center;
         justify-content: center;
         align-items: center;
     }
+
+    .contenedorInput{
+        margin: 0%;
+        margin-bottom: 10%;
+    }
+
+    .pBusqueda{
+        display: flex;
+        justify-content: center;
+    }
+    
     /*Footer*/
     .lista-footer{
         flex-direction: column;
