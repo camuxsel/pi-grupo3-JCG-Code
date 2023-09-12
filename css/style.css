@@ -156,6 +156,10 @@ footer{
     width: 4%;
 }
 
+.favoritosA {
+    margin: 1% 0
+}
+
 .ulgeneroB{
     display: flex;
 }
