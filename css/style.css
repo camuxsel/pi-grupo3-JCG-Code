@@ -17,6 +17,7 @@ a, ul, ol, li {
 h1, h2 {
     font-weight: 200;
     font-size: 2em;
+    color: white;
 }
 
 /*Condiciones del header*/
@@ -74,6 +75,16 @@ h1, h2 {
 .pBusqueda {
     color: white;
 }
+
+.botonBusqueda{
+    width: fit-content;
+    align-self: flex-end;
+    margin: 2% 0%;
+    background-color: rgba(116, 21, 206, 0.762);
+    color: white;
+    border: 1px solid gray;
+}
+
 /*Condiciones del footer*/
 footer{
     background-color: black;
@@ -124,7 +135,7 @@ footer{
     margin: 0%;
 }
 
-.h1Barbie {
+.h1-peliSerie {
     display: flex;
     color: #e73ac8;
     flex-direction: column;
@@ -133,7 +144,7 @@ footer{
     font-size: 205%;
 }
 
-.h1GG {
+.h1-serie {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -141,7 +152,7 @@ footer{
     font-size: 205%;
 }
 
-.h2Barbie {
+.h2-peliSerie {
     display: flex;
     color: aliceblue;
     flex-direction: row;
@@ -150,7 +161,7 @@ footer{
     align-items: center;
 }
 
-.h3Barbie{
+.h3-peliSerie{
     font-weight: 100;
 }
 
@@ -174,6 +185,14 @@ footer{
 
 .generoB {
     padding: 1%;
+}
+
+.link:hover{
+    color: lightblue;
+}
+
+.favoritos:hover{
+    color: lightblue;
 }
 
 .sinopsis{
@@ -227,7 +246,6 @@ footer{
     margin-bottom: 0%;
 }
 
-/* resolucion conficto*/
 .genero-titulo{
     color: white;
     display: flex;
@@ -334,6 +352,10 @@ footer{
         justify-content: center;
     }
     
+    .botonBusqueda{
+        align-self: center;
+    }
+
     /*Footer*/
     .lista-footer{
         flex-direction: column;
