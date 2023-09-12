@@ -133,6 +133,14 @@ footer{
     font-size: 205%;
 }
 
+.h1GG {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 2% 0% 0%;
+    font-size: 205%;
+}
+
 .h2Barbie {
     display: flex;
     color: aliceblue;
