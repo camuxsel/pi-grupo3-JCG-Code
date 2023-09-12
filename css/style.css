@@ -390,26 +390,37 @@ footer{
     }
 
     /*Pelicula.html*/
+    .sectionPeli{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 1%;
+    }
     .descripcion{
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         height: fit-content;
         margin-top: 0%;
-        width: 54%;
+        width: 100%;
     }
 
     .imgPelicula {
         float: left;
-        width: 40%;
+        width: 80%;
         height: fit-content;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 20px 0px;
+
     }
 
     .ulPeli{
         margin: 0%;
+        width: 100%;
     }
 
     .ulgeneroB{
@@ -421,7 +432,7 @@ footer{
     }
 
     .sinopsis{
-        padding: 5%;
+        padding: 0%;
         margin: 0%;
     }
 
