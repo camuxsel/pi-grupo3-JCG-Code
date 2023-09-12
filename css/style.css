@@ -290,7 +290,7 @@ footer{
     align-items: center;
     background-color: #666;
     border: 3px solid rgb(57 8 103 / 42%);
-    height: 80vh;
+    height: 84vh;
     margin: 2% 0 2% 0;
 }
 .art-home img{
@@ -302,6 +302,9 @@ footer{
 }
 .art-home h3{
     color: white;
+}
+.art-home p{
+    margin: 0;
 }
 /* hasta aca*/
 
