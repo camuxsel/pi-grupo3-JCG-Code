@@ -68,12 +68,7 @@ h1, h2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 0% 0% 0% 121%;
     width: 100%;
-}
-
-.pBusqueda {
-    color: white;
 }
 
 .botonBusqueda{
