@@ -25,7 +25,7 @@ h1, h2 {
     background-color: black;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     height: fit-content;
     border: 3px solid rgba(57, 8, 103, 0.762);
@@ -33,19 +33,19 @@ h1, h2 {
 }
 
 .logo{
-    width: 33%;
+    width: fit-content;
 }
 
 .imgHeader {
     width: 150px;
     margin: 2%;
+    w
 }
 
 .navListHeader {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 33%;
 }
 
 .ulNav {
@@ -67,14 +67,14 @@ h1, h2 {
 .contenedorInput {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
 }
 
 .botonBusqueda{
     width: fit-content;
     align-self: flex-end;
-    margin: 2% 0%;
+    margin: 2%;
     background-color: rgba(116, 21, 206, 0.762);
     color: white;
     border: 1px solid gray;
