@@ -34,23 +34,23 @@
 <!--Comienzo del main-->
     <main>
     <section class="sectionPeli">
-        <img class="imgPelicula" src="./imgs/barbie.webp" alt="Foto de Barbie">
+        <img class="imgPelicula" id="img_pp" src="./imgs/barbie.webp" alt="Foto de Barbie">
         <div class="descripcion">
             <ul class="ulPeli">
                 <li>
-                <h1 class="h1-peliSerie">Barbie: La Película</h1>
-                <ul class="ulgeneroB">
+                <h1 class="h1-peliSerie" id="nombre_pp">Barbie: La Película</h1>
+                <ul class="ulgeneroB" id="genero_pp">
                     <li class="generoB"><a href="./genero.html" class="generoB link">Comedia</a></li>
                     <li class="generoB">|</li>
                     <li class="generoB"> <a href="./genero.html" class="generoB link">Drama</a></li>
                     <li class="generoB">|</li>
                     <li class="generoB"> <a href="./genero.html" class="generoB link">Fantasía</a></li>
                 </ul>
-                <h2 class="h2-peliSerie"> <img class="imgEstrella" src="./imgs/estrella.png" alt="Estrella"> 7,5/ 10 </h2>
-                <h2 class="h2-peliSerie"><a class="favoritos" href="./favoritos.html">Agregar esta película a favoritos.</a></h2>
-                <h3 class="h3-peliSerie">Fecha de estreno: 20 de julio de 2023</h3>
-                <h3 class="h3-peliSerie">Duración: 1h 54m </h3>      
-                <h3 class="h3-peliSerie sinopsis">Barbie vive en Barbieland donde todo es ideal y lleno de música y color. Un buen día decide conocer el mundo real. Cuando el CEO de Mattel se entere tratará de evitarlo a toda costa y devolver a Barbie a una caja.</h3>          
+                <h2 class="h2-peliSerie" id="calificacion_pp"> <img class="imgEstrella" src="./imgs/estrella.png" alt="Estrella"> 7,5/ 10 </h2>
+                <h2 class="h2-peliSerie" id="favoritos_pp"><a class="favoritos" href="./favoritos.html">Agregar esta película a favoritos.</a></h2>
+                <h3 class="h3-peliSerie" id="estreno_pp">Fecha de estreno: 20 de julio de 2023</h3>
+                <h3 class="h3-peliSerie" id="duracion_pp">Duración: 1h 54m </h3>      
+                <h3 class="h3-peliSerie sinopsis" id="sinopsis">Barbie vive en Barbieland donde todo es ideal y lleno de música y color. Un buen día decide conocer el mundo real. Cuando el CEO de Mattel se entere tratará de evitarlo a toda costa y devolver a Barbie a una caja.</h3>          
                 </li>
             </ul>
         </div>        
@@ -65,6 +65,6 @@
             <li class="lista-footer nombres">Selvas Camila</li>
         </ul>
     </footer>
-
+    <script src="js/pelicula.js"></script>
 </body>
 </html>

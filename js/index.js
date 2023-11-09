@@ -1,4 +1,3 @@
-console.log("hola");
 
 let APIkey = "b7755d0a973ff1c1d329431ff2d89d36";
 let urlPeliculasPopulares = `https://api.themoviedb.org/3/movie/popular?api_key=${APIkey}`;
@@ -19,7 +18,7 @@ fetch(urlPeliculasPopulares)
 
     for (let i = 0; i < 6; i++) {
         let pelicula= peliculas[i];
-        contenido_pp += `<a href="pelicula.html">
+        contenido_pp += `<a href="./pelicula.html?idPelicula=${pelicula.id}">
                             <article class="art-home">
                                 <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="">
                                 <h3>${pelicula.title}</h3> 
@@ -80,7 +79,7 @@ fetch(urlSeriesPopulares)
                             <article class="art-home">
                                 <img src="https://image.tmdb.org/t/p/w500/${seriePopular.poster_path}" alt="">
                                 <h3>${seriePopular.name}</h3>
-                                <p>Fecha de estreno: ${seriePopular.firts_air_date} </p>
+                                <p>Fecha de estreno: ${seriePopular.first_air_date} </p>
                              </article>
                         </a>`
                          
