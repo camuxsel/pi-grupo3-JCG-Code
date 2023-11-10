@@ -15,7 +15,7 @@ fetch(urldetalleSerie_v)
     console.log(data);
     for (let i = 0; i < data.genres.length; i++) {
         let genero_serie = data.genres[i]
-        generos_s += `<li class="generoB"><a href="./genero.html" class="generoB link" idGenero=${genero_serie.id}>${genero_serie.name}</a></li>`
+        generos_s += `<li class="generoB"><a href="./genero.html?idGenero=${genero_serie.id}" class="generoB link">${genero_serie.name}</a></li>`
         console.log(generos_s);
     }
     sectionSerie.innerHTML = `<img class="imgPelicula" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="Poster Serie">
