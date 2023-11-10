@@ -76,7 +76,7 @@ fetch(urldetallePelicula)
         .catch(function(error) {
             console.log(error);
         })
-    })
+    });
 })
 .catch(function (error) {
     console.log(error);
