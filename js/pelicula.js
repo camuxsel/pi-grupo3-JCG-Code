@@ -3,7 +3,8 @@ let qsObj = new URLSearchParams(qs);
 let idPelicula = qsObj.get("idPelicula"); /* <= el id de la pelicula a buscar */
 let APIkey = "b7755d0a973ff1c1d329431ff2d89d36";
 let tituloPagina_pp = document.querySelector("#tituloPagina_pp ")
-let urldetallePelicula = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${APIkey}`
+let urldetallePelicula = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${APIkey}&language=es-MX`;
+
 let generos_pp = ""
 
 fetch(urldetallePelicula)
@@ -30,9 +31,10 @@ fetch(urldetallePelicula)
                                     <h3 class="h3-peliSerie" id="estreno_pp">Fecha de estreno: ${data.release_date}</h3>
                                     <h3 class="h3-peliSerie" id="duracion_pp">Duración: ${data.runtime}' </h3>
                                     <h3 class="h3-peliSerie sinopsis" id="sinopsis">${data.overview}</h3>
-                                    </li><h2 class="h2-peliSerie" id="favoritos_pp"><a class="favoritos" href="./favoritos.html"> Ver recomendaciones </a></h2>
+                                    </li><h2 class="h2-peliSerie" id="favoritos_pp"><a class="favoritos"> Ver recomendaciones </a></h2>
                                 </ul>
                             </div>`
+                            
 
     tituloPagina_pp.innerText = data.title;
 })
