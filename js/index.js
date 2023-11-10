@@ -20,7 +20,7 @@ fetch(urlPeliculasPopulares)
         let pelicula= peliculas[i];
         contenido_pp += `<a href="./pelicula.html?idPelicula=${pelicula.id}">
                             <article class="art-home">
-                                <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="">
+                                <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="Poster de ${pelicula.title}">
                                 <h3>${pelicula.title}</h3> 
                                 <p>Fecha de estreno: ${pelicula.release_date}</p>
                             </article>
@@ -47,7 +47,7 @@ fetch(urlSeriesValoradas)
         let seriesV= seriesValoradas[i]
         contenido_sv += `<a href="./serie.html?idSerie=${seriesV.id}">
                             <article class="art-home">
-                                <img src="https://image.tmdb.org/t/p/w500/${seriesV.poster_path}" alt="">
+                                <img src="https://image.tmdb.org/t/p/w500/${seriesV.poster_path}" alt="Poster de ${seriesV.name}">
                                 <h3>${seriesV.name}</h3> 
                                 <p>Fecha de estreno: ${seriesV.first_air_date}</p>
                             </article>
@@ -77,7 +77,7 @@ fetch(urlSeriesPopulares)
         let seriePopular = seriesPopulares[i];
         contenido_sp += `<a href="serie.html?idSerie=${seriePopular.id}">
                             <article class="art-home">
-                                <img src="https://image.tmdb.org/t/p/w500/${seriePopular.poster_path}" alt="">
+                                <img src="https://image.tmdb.org/t/p/w500/${seriePopular.poster_path}" alt="Poster de ${seriePopular.name}">
                                 <h3>${seriePopular.name}</h3>
                                 <p>Fecha de estreno: ${seriePopular.first_air_date} </p>
                              </article>
