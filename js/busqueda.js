@@ -38,13 +38,13 @@ fetch(urlBusqueda)
 
         let contenido = '';
         for (let i = 0; i < 6; i++) {
-        contenido +=`<a href="pelicula.html">
-                        <article class="art-home">
-                            <img src="https://image.tmdb.org/t/p/w500/${pelicula[i].poster_path}" alt="Poster pelicula">
-                            <h3>${pelicula[i].title}</h3> 
-                            <p>Fecha de estreno: ${pelicula[i].release_date}</p>
-                        </article>
-                    </a>`
+            contenido +=`<a href="pelicula.html">
+                            <article class="art-home">
+                                <img src="https://image.tmdb.org/t/p/w500/${pelicula[i].poster_path}" alt="Poster pelicula">
+                                <h3>${pelicula[i].title}</h3> 
+                                <p>Fecha de estreno: ${pelicula[i].release_date}</p>
+                            </article>
+                        </a>`
     };
 
     listaBusqueda.innerHTML += contenido;

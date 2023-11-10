@@ -30,7 +30,7 @@ fetch(urldetallePelicula)
                                     <h3 class="h3-peliSerie" id="estreno_pp">Fecha de estreno: ${data.release_date}</h3>
                                     <h3 class="h3-peliSerie" id="duracion_pp">Duración: ${data.runtime}' </h3>
                                     <h3 class="h3-peliSerie sinopsis" id="sinopsis">${data.overview}</h3>
-                                    </li>
+                                    </li><h2 class="h2-peliSerie" id="favoritos_pp"><a class="favoritos" href="./favoritos.html"> Ver recomendaciones </a></h2>
                                 </ul>
                             </div>`
 
