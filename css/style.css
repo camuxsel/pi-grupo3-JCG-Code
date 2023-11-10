@@ -387,7 +387,7 @@ footer{
         align-items: center;
         background-color: #666;
         border: 3px solid rgb(57 8 103 / 42%);
-        height: 80vh;
+        height: max-content;
         margin: 3% 5%;
     }
     /*hasta aca*/
