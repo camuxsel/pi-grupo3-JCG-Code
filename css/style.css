@@ -123,6 +123,7 @@ footer{
 .imgPelicula {
     margin: 4px;
     width: 30%;
+    height: fit-content;
 }
 
 .ulPeli{
@@ -193,8 +194,13 @@ footer{
     color: white;
 }
 
-/*Fin de peliculas*/
+#verRecomendaciones{
+    display: none;
+}
 
+#textoRecomendaciones:hover{
+    color: lightblue;
+}
 
 
 /* Propiedades de generos.html */
