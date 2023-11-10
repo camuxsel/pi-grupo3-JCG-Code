@@ -4,7 +4,8 @@ let idPelicula = qsObj.get("idPelicula"); /* <= el id de la pelicula a buscar */
 
 let APIkey = "b7755d0a973ff1c1d329431ff2d89d36";
 let tituloPagina_pp = document.querySelector("#tituloPagina_pp ");
-let urldetallePelicula = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${APIkey}`;
+let urldetallePelicula = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${APIkey}&language=es-MX`;
+;
 
 let generos_pp = "";
 
@@ -43,6 +44,7 @@ fetch(urldetallePelicula)
                                     </li>                    
                                 </ul>
                             </div>`
+                            
 
     tituloPagina_pp.innerText = data.title;
 

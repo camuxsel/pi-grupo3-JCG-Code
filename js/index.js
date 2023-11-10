@@ -45,7 +45,7 @@ fetch(urlSeriesValoradas)
 
     for (let i = 0; i < 6; i++) {
         let seriesV= seriesValoradas[i]
-        contenido_sv += `<a href="serie.html">
+        contenido_sv += `<a href="./serie.html?idSerie=${seriesV.id}">
                             <article class="art-home">
                                 <img src="https://image.tmdb.org/t/p/w500/${seriesV.poster_path}" alt="">
                                 <h3>${seriesV.name}</h3> 
@@ -75,7 +75,7 @@ fetch(urlSeriesPopulares)
 
     for (let i = 0; i < 6; i++) {
         let seriePopular = seriesPopulares[i];
-        contenido_sp += `<a href="serie.html">
+        contenido_sp += `<a href="serie.html?idSerie=${seriePopular.id}">
                             <article class="art-home">
                                 <img src="https://image.tmdb.org/t/p/w500/${seriePopular.poster_path}" alt="">
                                 <h3>${seriePopular.name}</h3>
