@@ -20,16 +20,16 @@ fetch(urldetalleSerie_v)
         generos_s += `<li class="generoB"><a href="./genero.html?idGenero=${genero_serie.id}" class="generoB link">${genero_serie.name}</a></li>`
         console.log(generos_s);
     }
-    sectionSerie.innerHTML =    `<img class="imgPelicula" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="Poster Serie">
+    sectionSerie.innerHTML =    `<img class="imgPelicula" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="Poster de ${data.name}">
                                 <div class="descripcion">
                                 <ul class="ulPeli">
                                     <li>
-                                        <h1 class="h1-serie">${data.original_name}</h1>
+                                        <h1 class="h1-serie">${data.name}</h1>
                                         <ul class="ulgeneroB">
                                             ${generos_s}
                                         </ul>
                                         <h2 class="h2-peliSerie"> <img class="imgEstrella" src="./imgs/estrella.png" alt="Estrella"> ${data.vote_average}/ 10 </h2>
-                                        <h2 class="h2-peliSerie"><a class="favoritos" href="./favoritos.html">Agregar esta serie a favoritos.</a></h2>
+                                        <h2 class="h2-peliSerie"><a class="favoritos" href="./favoritos.html">Agregar esta serie a favoritos</a></h2>
                                         <h3 class="h3-peliSerie">Fecha de estreno: ${data.first_air_date}</h3>   
                                         <h3 class="h3-peliSerie sinopsis">${data.overview}</h3>            
                                     </li>
