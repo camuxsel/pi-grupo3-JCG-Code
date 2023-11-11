@@ -50,13 +50,13 @@ fetch(urlBusquedaPelis)
 
         let contenidoPelis = '';
         for (let i = 0; i < 6; i++) {
-            contenidoPelis +=`<a href="./pelicula.html?idPelicula=${pelicula[i].id}">
+            contenidoPelis +=`<li><a href="./pelicula.html?idPelicula=${pelicula[i].id}">
                             <article class="art-home">
                                 <img src="https://image.tmdb.org/t/p/w500/${pelicula[i].poster_path}" alt="Poster pelicula">
                                 <h3>${pelicula[i].title}</h3> 
                                 <p>Fecha de estreno: ${pelicula[i].release_date}</p>
                             </article>
-                        </a>`
+                        </a></li>`
     };
 
     listaBusquedaPelis.innerHTML += contenidoPelis;
