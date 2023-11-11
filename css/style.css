@@ -205,6 +205,9 @@ footer{
     color: lightblue;
 }
 
+#favoritos_pp:hover{
+    color: lightblue;
+}
 
 /* Propiedades de generos.html */
 .generos{

@@ -13,7 +13,7 @@ fetch(urldetallePelicula)
 .then(function (res) {
     return res.json()
 })
-.then(function (data) {
+.then(function(data){
     console.log(data);
     for (let i = 0; i < data.genres.length; i++) {
         let genero = data.genres[i]
@@ -31,7 +31,7 @@ fetch(urldetallePelicula)
                                             ${generos_pp}
                                         </ul>
                                         <h2 class="h2-peliSerie" id="calificacion_pp"> <img class="imgEstrella" src="./imgs/estrella.png" alt="Estrella"> ${data.vote_average} / 10 </h2>
-                                        <h2 class="h2-peliSerie" id="favoritos_pp"><a class="favoritos" href="./favoritos.html">Agregar esta película a favoritos</a></h2>
+                                        <h2 class="h2-peliSerie" id="favoritos_pp">Agregar esta película a favoritos</h2>
                                         <h3 class="h3-peliSerie" id="estreno_pp">Fecha de estreno: ${data.release_date}</h3>
                                         <h3 class="h3-peliSerie" id="duracion_pp">Duración: ${data.runtime}' </h3>
                                         <h3 class="h3-peliSerie sinopsis" id="sinopsis">${data.overview}</h3>
@@ -76,7 +76,35 @@ fetch(urldetallePelicula)
             console.log(error);
         })
     });
+
+    let peliFavoritos = document.querySelector('#favoritos_pp');
+
+    // Esto es para que al refrescar la pagina se mantenga el texto correcto 
+    if (localStorage.getItem(movie_id)) {
+        peliFavoritos.innerText = 'Quitar de favoritos';
+    } else {
+        peliFavoritos.innerText = 'Agregar esta película a favoritos';
+    };
+
+    console.log(peliFavoritos);
+    console.log(movie_id);
+
+    // Con esto hacemos que al hacer click en peliFavoritos se modifique el localStorage según corresponda
+    peliFavoritos.addEventListener('click',function(){
+        if(peliFavoritos.innerText == 'Agregar esta película a favoritos'){
+            peliFavoritos.innerText = 'Quitar de favoritos';
+            let movie_idString = JSON.stringify(movie_id);
+            localStorage.setItem(movie_id,movie_idString);
+            console.log(movie_idString);
+        } else {
+            peliFavoritos.innerText = 'Agregar esta película a favoritos';
+            localStorage.removeItem(movie_id);
+            console.log('Funciono!');
+        };
+    });   
 })
 .catch(function (error) {
     console.log(error);
 });
+
+console.log(localStorage);
