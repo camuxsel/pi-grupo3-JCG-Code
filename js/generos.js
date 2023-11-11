@@ -16,7 +16,7 @@ fetch(urlGenerosPeliculas)
 
     for (let i = 0; i < generos.length; i++) {
         let genero = generos[i];                 
-        contenido_generos_peliculas += `<li class="lista-generos"> <a href="./genero.html?idGenero=${genero.id}&name=">${genero.name}</a> </li>`  
+        contenido_generos_peliculas += `<li class="lista-generos"> <a href="./genero.html?idGenero=${genero.id}&name=${genero.name}">${genero.name}</a> </li>`  
     };
     console.log(contenido_generos_peliculas);
     generos_peliculas.innerHTML = contenido_generos_peliculas;
@@ -39,7 +39,7 @@ fetch(urlGenerosSeries)
 
     for (let i = 0; i < generos.length; i++) {
         let genero = generos[i];
-        contenido_generos_series += `<li class="lista-generos"> <a href="./genero.html?idGenero= ${genero["id"]}">${genero["name"]}</a> </li>`  
+        contenido_generos_series += `<li class="lista-generos"> <a href="./genero.html?idGenero= ${genero.id}&name=${genero.name}">${genero.name}</a> </li>`  
     };
     console.log(contenido_generos_series);
     generos_series.innerHTML = contenido_generos_series;
