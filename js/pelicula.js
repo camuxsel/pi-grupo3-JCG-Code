@@ -51,30 +51,34 @@ fetch(urldetallePelicula)
     let verRecomendaciones = document.querySelector('#verRecomendaciones');
 
     textoRecomendaciones.addEventListener('click', function( ) {
-        verRecomendaciones.style.display = 'block';
-        let urlRecomendacionesPelis = `https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=${APIkey}`;
+        if(verRecomendaciones.style.display == 'none'){
+            verRecomendaciones.style.display = 'block';
+            let urlRecomendacionesPelis = `https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=${APIkey}`;
         
-        fetch(urlRecomendacionesPelis)
-        .then(function(res){
+            fetch(urlRecomendacionesPelis)
+            .then(function(res){
             return res.json();
-        })
-        .then(function(data){
-            console.log(data.results);
-            let recomendacionesPelis = data.results;
+            })
+            .then(function(data){
+                console.log(data.results);
+                let recomendacionesPelis = data.results;
 
-            if (recomendacionesPelis.length == 0){
-                verRecomendaciones.innerHTML += '<h2>No hay recomendaciones disponibles aún :(</h2>'
-            }else{
-                let pelisRecomendadas = '';
-                for (let i = 0; i < 3; i++) {
-                    pelisRecomendadas += `<a href="./pelicula.html?idPelicula=${recomendacionesPelis[i].id}"> <img class="imgPelicula" src="https://image.tmdb.org/t/p/w500/${recomendacionesPelis[i].poster_path}" alt="Poster de pelicula"> </a>`
+                if (recomendacionesPelis.length == 0){
+                    verRecomendaciones.innerHTML = '<h2>No hay recomendaciones disponibles aún :(</h2>'
+                }else{
+                    let pelisRecomendadas = '';
+                    for (let i = 0; i < 3; i++) {
+                        pelisRecomendadas += `<a href="./pelicula.html?idPelicula=${recomendacionesPelis[i].id}"> <img class="imgPelicula" src="https://image.tmdb.org/t/p/w500/${recomendacionesPelis[i].poster_path}" alt="Poster de pelicula"> </a>`
+                    }
+                verRecomendaciones.innerHTML = pelisRecomendadas;
                 }
-            verRecomendaciones.innerHTML += pelisRecomendadas;
-            }
-        })
-        .catch(function(error) {
-            console.log(error);
-        })
+            })
+            .catch(function(error) {
+                console.log(error);
+            })
+        } else{
+            verRecomendaciones.style.display = 'none';
+        };
     });
 
     let peliFavoritos = document.querySelector('#favoritos_pp');

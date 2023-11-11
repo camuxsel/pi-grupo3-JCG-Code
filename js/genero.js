@@ -49,7 +49,7 @@ fetch(urlGeneros_series)
     for (let i = 0; i < 6; i++) {
         let serie= series[i];
         console.log(serie);
-        contenido_s += `<a href="./pelicula.html?idPelicula=${serie.id}">
+        contenido_s += `<a href="./serie.html?idSerie=${serie.id}">
                             <article class="art-home">
                                 <img src="https://image.tmdb.org/t/p/w500/${serie.poster_path}" alt="">
                                 <h3>${serie.name}</h3> 

@@ -49,30 +49,34 @@ fetch(urldetalleSerie_v)
     let verRecomendaciones = document.querySelector('#verRecomendaciones');
 
     textoRecomendaciones.addEventListener('click', function( ) {
-        verRecomendaciones.style.display = 'block';
-        let urlRecomendacionesSeries = `https://api.themoviedb.org/3/tv/${idSerie}/recommendations?api_key=${APIkey}`;
+        if (verRecomendaciones.style.display == 'none'){
+            verRecomendaciones.style.display = 'block';
+            let urlRecomendacionesSeries = `https://api.themoviedb.org/3/tv/${idSerie}/recommendations?api_key=${APIkey}`;
         
-        fetch(urlRecomendacionesSeries)
-        .then(function(res){
-            return res.json();
-        })
-        .then(function(data){
-            console.log(data.results);
-            let recomendacionesSeries = data.results;
+            fetch(urlRecomendacionesSeries)
+            .then(function(res){
+                return res.json();
+            })
+            .then(function(data){
+                console.log(data.results);
+                let recomendacionesSeries = data.results;
 
-            if (recomendacionesSeries.length == 0){
-                verRecomendaciones.innerHTML += '<h2>No hay recomendaciones disponibles aún :(</h2>'
-            }else{
-                let seriesRecomendadas = '';
-                for (let i = 0; i < 3; i++) {
-                    seriesRecomendadas += `<a href="./serie.html?idSerie=${recomendacionesSeries[i].id}"> <img class="imgPelicula" src="https://image.tmdb.org/t/p/w500/${recomendacionesSeries[i].poster_path}" alt="Poster de serie"> </a>`
+                if (recomendacionesSeries.length == 0){
+                    verRecomendaciones.innerHTML = '<h2>No hay recomendaciones disponibles aún :(</h2>'
+                }else{
+                    let seriesRecomendadas = '';
+                    for (let i = 0; i < 3; i++) {
+                        seriesRecomendadas += `<a href="./serie.html?idSerie=${recomendacionesSeries[i].id}"> <img class="imgPelicula" src="https://image.tmdb.org/t/p/w500/${recomendacionesSeries[i].poster_path}" alt="Poster de serie"> </a>`
+                    }
+                verRecomendaciones.innerHTML = seriesRecomendadas;
                 }
-            verRecomendaciones.innerHTML += seriesRecomendadas;
-            }
-        })
-        .catch(function(error) {
-            console.log(error);
-        })
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+        }else{
+            verRecomendaciones.style.display == 'none';
+        };
     });
 
 })
