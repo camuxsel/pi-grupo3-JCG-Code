@@ -265,9 +265,17 @@ footer{
     display: flex;
     flex-direction: row;
     width: 100%;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
+.listado-genero a{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    padding: 0px;
+    width: 30%;
+}
 .lista-genero{
     margin: 0% 1%;
     width: 23%;
@@ -414,6 +422,11 @@ footer{
     .listado-genero{
         justify-content: center;
         margin: 0%;
+        flex-wrap: wrap;
+    }
+
+    .listado-genero a{
+        width: 100%;
     }
 
     .lista-genero{

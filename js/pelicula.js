@@ -17,7 +17,7 @@ fetch(urldetallePelicula)
     console.log(data);
     for (let i = 0; i < data.genres.length; i++) {
         let genero = data.genres[i]
-        generos_pp += `<li class="generoB"><a href="./genero.html?idGenero=${genero.id}" class="generoB link">${genero.name}</a></li> `
+        generos_pp += `<li class="generoB"><a href="./genero.html?idGenero=${genero.id}&name=${genero.name}" class="generoB link">${genero.name}</a></li> `
         console.log(generos_pp);
     }
     let movie_id = data.id;
