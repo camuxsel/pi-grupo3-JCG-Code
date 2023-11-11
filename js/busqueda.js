@@ -86,13 +86,13 @@ fetch(urlBusquedaSeries)
 
         let contenidoSeries = '';
         for (let i = 0; i < 6; i++) {
-            contenidoSeries +=`<a href="./serie.html?idSerie=${serie[i].id}">
+            contenidoSeries +=`<li><a href="./serie.html?idSerie=${serie[i].id}">
                             <article class="art-home">
                                 <img src="https://image.tmdb.org/t/p/w500/${serie[i].poster_path}" alt="Poster Serie">
                                 <h3>${serie[i].name}</h3> 
                                 <p>Fecha de estreno: ${serie[i].first_air_date}</p>
                             </article>
-                        </a>`
+                        </a></li>`
     };
     listaBusquedaSeries.innerHTML += contenidoSeries;
     };
