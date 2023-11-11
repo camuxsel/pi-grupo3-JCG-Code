@@ -5,8 +5,8 @@ let idPelicula = qsObj.get("idPelicula"); /* <= el id de la pelicula a buscar */
 let APIkey = "b7755d0a973ff1c1d329431ff2d89d36";
 let tituloPagina_pp = document.querySelector("#tituloPagina_pp ");
 let urldetallePelicula = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${APIkey}&language=es-MX`;
-;
 
+let section_pp = document.querySelector("#section_pp");
 let generos_pp = "";
 
 fetch(urldetallePelicula)
@@ -22,7 +22,7 @@ fetch(urldetallePelicula)
     }
     let movie_id = data.id;
 
-    section_pp.innerHTML = `<img class="imgPelicula" id="img_pp" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="Foto de Barbie">
+    section_pp.innerHTML = `<img class="imgPelicula" id="img_pp" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="Poster de ${data.title}">
                             <div class="descripcion">
                                 <ul class="ulPeli">
                                     <li>
@@ -31,7 +31,7 @@ fetch(urldetallePelicula)
                                             ${generos_pp}
                                         </ul>
                                         <h2 class="h2-peliSerie" id="calificacion_pp"> <img class="imgEstrella" src="./imgs/estrella.png" alt="Estrella"> ${data.vote_average} / 10 </h2>
-                                        <h2 class="h2-peliSerie" id="favoritos_pp"><a class="favoritos" href="./favoritos.html">Agregar esta película a favoritos.</a></h2>
+                                        <h2 class="h2-peliSerie" id="favoritos_pp"><a class="favoritos" href="./favoritos.html">Agregar esta película a favoritos</a></h2>
                                         <h3 class="h3-peliSerie" id="estreno_pp">Fecha de estreno: ${data.release_date}</h3>
                                         <h3 class="h3-peliSerie" id="duracion_pp">Duración: ${data.runtime}' </h3>
                                         <h3 class="h3-peliSerie sinopsis" id="sinopsis">${data.overview}</h3>
@@ -44,7 +44,6 @@ fetch(urldetallePelicula)
                                     </li>                    
                                 </ul>
                             </div>`
-                            
 
     tituloPagina_pp.innerText = data.title;
 
@@ -81,9 +80,3 @@ fetch(urldetallePelicula)
 .catch(function (error) {
     console.log(error);
 });
-
-
-// let urlRecomendacionesSeries = `https://api.themoviedb.org/3/tv/{series_id}/recommendations?api_key=${APIkey}`;
-
-
-

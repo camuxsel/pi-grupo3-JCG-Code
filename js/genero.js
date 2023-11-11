@@ -7,7 +7,7 @@ let tituloGenero = document.querySelector("#tituloGenero");
 let urlGeneros_peliculas = `https://api.themoviedb.org/3/discover/movie?api_key=${APIkey}&with_genres=${idGenero}`;
 let urlGeneros_series = `https://api.themoviedb.org/3/discover/tv?api_key=${APIkey}&with_genres=${idGenero}`;
 
-tituloGenero.innerText= nombreGenero;
+tituloGenero.innerText = nombreGenero;
 
 fetch(urlGeneros_peliculas)
 .then(function (res) {
@@ -21,12 +21,14 @@ fetch(urlGeneros_peliculas)
 
     for (let i = 0; i < 6; i++) {
         let pelicula= peliculas[i];
-        contenido_p += `<a href="./pelicula.html?idPelicula=${pelicula.id}">
-                            <article class="art-home">
-                                <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="">
-                                <h3>${pelicula.title}</h3> 
-                            </article>
-                        </a>`  
+        contenido_p += `<li>
+                            <a href="./pelicula.html?idPelicula=${pelicula.id}">
+                                <article class="art-home">
+                                    <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="">
+                                    <h3>${pelicula.title}</h3> 
+                                </article>
+                            </a> 
+                        </li>`
     };
     peliculas_genero.innerHTML = contenido_p;
 })
