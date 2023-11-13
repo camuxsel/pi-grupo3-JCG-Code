@@ -29,7 +29,7 @@ fetch(urldetalleSerie_v)
                                             ${generos_s}
                                         </ul>
                                         <h2 class="h2-peliSerie"> <img class="imgEstrella" src="./imgs/estrella.png" alt="Estrella"> ${data.vote_average}/ 10 </h2>
-                                        <h2 class="h2-peliSerie"><a class="favoritos" href="./favoritos.html">Agregar esta serie a favoritos</a></h2>
+                                        <h2 class="h2-peliSerie" id="serieFavoritos">Agregar esta serie a favoritos</h2>
                                         <h3 class="h3-peliSerie">Fecha de estreno: ${data.first_air_date}</h3>   
                                         <h3 class="h3-peliSerie sinopsis">${data.overview}</h3>            
                                     </li>
@@ -52,6 +52,7 @@ fetch(urldetalleSerie_v)
         if (verRecomendaciones.style.display == 'none'){
             verRecomendaciones.style.display = 'block';
             let urlRecomendacionesSeries = `https://api.themoviedb.org/3/tv/${idSerie}/recommendations?api_key=${APIkey}`;
+            console.log(urlRecomendacionesSeries);
         
             fetch(urlRecomendacionesSeries)
             .then(function(res){
@@ -79,7 +80,35 @@ fetch(urldetalleSerie_v)
         };
     });
 
+    let serieFavoritos = document.querySelector('#serieFavoritos');
+
+    // Esto es para que al refrescar la pagina se mantenga el texto correcto 
+    if (localStorage.getItem(idSerie)) {
+        serieFavoritos.innerText = 'Quitar de favoritos';
+    } else {
+        serieFavoritos.innerText = 'Agregar esta serie a favoritos';
+    };
+
+    console.log(serieFavoritos);
+    console.log(idSerie);
+
+    // Con esto hacemos que al hacer click en serieFavoritos se modifique el localStorage según corresponda
+    serieFavoritos.addEventListener('click',function(){
+        if(serieFavoritos.innerText == 'Agregar esta serie a favoritos'){
+            serieFavoritos.innerText = 'Quitar de favoritos';
+            let idSerieString = JSON.stringify(idSerie);
+            localStorage.setItem(idSerie,idSerieString);
+            console.log(idSerieString);
+        } else {
+            serieFavoritos.innerText = 'Agregar esta serie a favoritos';
+            localStorage.removeItem(idSerie);
+            console.log('Funciono!');
+        };
+    });   
+
 })
 .catch(function (error) {
     console.log(error);
 });
+
+console.log(localStorage);
