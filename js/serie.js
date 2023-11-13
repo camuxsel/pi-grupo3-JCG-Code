@@ -45,6 +45,8 @@ fetch(urldetalleSerie_v)
 
     tituloPagina_sv.innerText = data.name;
 
+    //Esto es para las recomendaciones:
+
     let textoRecomendaciones = document.querySelector('#textoRecomendaciones');
     let verRecomendaciones = document.querySelector('#verRecomendaciones');
 
@@ -76,17 +78,34 @@ fetch(urldetalleSerie_v)
                 console.log(error);
             });
         }else{
-            verRecomendaciones.style.display == 'none';
+            verRecomendaciones.style.display = 'none';
         };
     });
 
     let serieFavoritos = document.querySelector('#serieFavoritos');
 
-    // Esto es para que al refrescar la pagina se mantenga el texto correcto 
-    if (localStorage.getItem(idSerie)) {
-        serieFavoritos.innerText = 'Quitar de favoritos';
-    } else {
-        serieFavoritos.innerText = 'Agregar esta serie a favoritos';
+    //Esto es porque al principio no existe series favoritas en el localStorage.
+    if(localStorage.getItem('seriesFavoritas')){
+        // Esto es para que al refrescar la pagina se mantenga el texto correcto en favoritos.
+        let favoritasS = localStorage.getItem('seriesFavoritas');
+        let arrayFavoritasS = JSON.parse(favoritasS);
+        for (let i = 0; i < arrayFavoritasS.length; i++) {
+            if(idSerie == arrayFavoritasS[i]){
+                serieFavoritos.innerText = 'Quitar de favoritos';
+            }        
+    };} else{
+        let arrayVacio = [];
+        let arrayVacioString = JSON.stringify(arrayVacio);
+        localStorage.setItem('seriesFavoritas',arrayVacioString);
+    };
+
+    // Esto es para que al refrescar la pagina se mantenga el texto correcto en favoritos.
+    let favoritasS = localStorage.getItem('seriesFavoritas');
+    let arrayFavoritasS = JSON.parse(favoritasS);
+    for (let i = 0; i < arrayFavoritasS.length; i++) {
+        if(idSerie == arrayFavoritasS[i]){
+            serieFavoritos.innerText = 'Quitar de favoritos';
+        }        
     };
 
     console.log(serieFavoritos);
@@ -96,13 +115,37 @@ fetch(urldetalleSerie_v)
     serieFavoritos.addEventListener('click',function(){
         if(serieFavoritos.innerText == 'Agregar esta serie a favoritos'){
             serieFavoritos.innerText = 'Quitar de favoritos';
-            let idSerieString = JSON.stringify(idSerie);
-            localStorage.setItem(idSerie,idSerieString);
-            console.log(idSerieString);
+
+            if (localStorage.getItem('seriesFavoritas')){
+                let seriesFavoritas = localStorage.getItem('seriesFavoritas');
+                let arraySeriesFavoritas = JSON.parse(seriesFavoritas);
+                arraySeriesFavoritas.push(idSerie);
+                let seriesFavoritasString = JSON.stringify(arraySeriesFavoritas);
+                localStorage.setItem('seriesFavoritas',seriesFavoritasString);
+                console.log(localStorage);
+            } else{
+                let seriesFavoritas = [idSerie];
+                let seriesFavoritasString = JSON.stringify(seriesFavoritas);
+                localStorage.setItem('seriesFavoritas',seriesFavoritasString);
+                console.log(localStorage);
+            };
         } else {
             serieFavoritos.innerText = 'Agregar esta serie a favoritos';
-            localStorage.removeItem(idSerie);
-            console.log('Funciono!');
+            let seriesFavoritas = localStorage.getItem('seriesFavoritas');
+            let arraySeriesFavoritas = JSON.parse(seriesFavoritas);
+            let nuevasSeriesFavoritas = [];
+
+            // Guardamos las pelis que todavia son favoritas en un nuevo array. La que acabamos de eliminar de favoritos no se guardará.
+            for (let i = 0; i < arraySeriesFavoritas.length; i++) {
+                if (arraySeriesFavoritas[i] == idSerie){
+                    // No pasa nada
+                }else {
+                    nuevasSeriesFavoritas.push(arraySeriesFavoritas[i])
+                };
+            };
+
+            let nuevasSeriesFavoritasString = JSON.stringify(nuevasSeriesFavoritas);
+            localStorage.setItem('seriesFavoritas',nuevasSeriesFavoritasString);
         };
     });   
 

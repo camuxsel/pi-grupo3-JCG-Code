@@ -209,6 +209,10 @@ footer{
     color: lightblue;
 }
 
+#serieFavoritos:hover{
+    color: lightblue;
+}
+
 /* Propiedades de generos.html */
 .generos{
     color: white;
@@ -308,6 +312,7 @@ footer{
 #noResults{
     display: none;
 }
+
 
 /*Main de index*/
 .sec-home h2{
