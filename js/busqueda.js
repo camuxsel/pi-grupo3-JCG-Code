@@ -49,10 +49,10 @@ fetch(urlBusquedaPelis)
         titulo.innerText = `Resultados de búsqueda: ${busqueda}`;
 
         let contenidoPelis = '';
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < pelicula.length; i++) {
             contenidoPelis +=`<li><a href="./pelicula.html?idPelicula=${pelicula[i].id}">
                             <article class="art-home">
-                                <img src="https://image.tmdb.org/t/p/w500/${pelicula[i].poster_path}" alt="Poster pelicula">
+                                <img src="https://image.tmdb.org/t/p/w500/${pelicula[i].poster_path}" alt="Poster pelicula ${pelicula[i].title}">
                                 <h3>${pelicula[i].title}</h3> 
                                 <p>Fecha de estreno: ${pelicula[i].release_date}</p>
                             </article>
@@ -85,10 +85,10 @@ fetch(urlBusquedaSeries)
         titulo.innerText = `Resultados de búsqueda: ${busqueda}`;
 
         let contenidoSeries = '';
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < serie.length; i++) {
             contenidoSeries +=`<li><a href="./serie.html?idSerie=${serie[i].id}">
                             <article class="art-home">
-                                <img src="https://image.tmdb.org/t/p/w500/${serie[i].poster_path}" alt="Poster Serie">
+                                <img src="https://image.tmdb.org/t/p/w500/${serie[i].poster_path}" alt="Poster de ${serie[i].name}">
                                 <h3>${serie[i].name}</h3> 
                                 <p>Fecha de estreno: ${serie[i].first_air_date}</p>
                             </article>
