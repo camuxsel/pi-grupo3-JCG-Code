@@ -56,6 +56,7 @@ fetch(urlGeneros_series)
                             </article>
                         </a>`  
     };
+    
     series_genero.innerHTML = contenido_s;
 })
 .catch(function (error) {
