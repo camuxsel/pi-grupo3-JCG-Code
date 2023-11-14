@@ -1,9 +1,10 @@
 
 let APIkey = "b7755d0a973ff1c1d329431ff2d89d36";
 let urlPeliculasPopulares = `https://api.themoviedb.org/3/movie/popular?api_key=${APIkey}`;
-let urlPeliculasValoradas = `https://api.themoviedb.org/3/movie/top_rated?api_key=${APIkey}`;
 let urlSeriesPopulares = `https://api.themoviedb.org/3/tv/popular?api_key=${APIkey}`;
 let urlSeriesValoradas = `https://api.themoviedb.org/3/tv/top_rated?api_key=${APIkey}`;
+
+let urlPeliculasValoradas = `https://api.themoviedb.org/3/movie/top_rated?api_key=${APIkey}`;
 
 /*automatizacion para el carrusel*/
 fetch(urlPeliculasValoradas)
@@ -18,10 +19,11 @@ fetch(urlPeliculasValoradas)
 
     for (let i = 0; i < 6; i++){
         let pelicula = carrusel[i];
-        contenido_carrusel += `<li>
-                                    <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="Poster de ${pelicula.title} width="400" height="600" alt="">
-                                </li>
-                                `
+        contenido_carrusel += `<a href="./pelicula.html?idPelicula=${pelicula.id}">
+                                    <li>
+                                        <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="Poster de ${pelicula.title}" width="400" height="600" alt="">
+                                    </li>
+                                </a>`
     }
     seccion_carrusel.innerHTML = contenido_carrusel;
 })

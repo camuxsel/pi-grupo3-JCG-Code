@@ -256,6 +256,7 @@ footer{
 
 .titulo-peli-serie{
     margin-bottom: 0%;
+    font-family: "Times new Roman";
 }
 
 .genero-titulo{
@@ -268,6 +269,7 @@ footer{
     width: 100%;
     margin-top: 2%;
     padding: 1%;
+    font-family: "Times new Roman";
 }
 
 .listado-genero{

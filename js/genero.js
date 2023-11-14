@@ -7,6 +7,35 @@ let tituloGenero = document.querySelector("#tituloGenero");
 let subtituloGeneroSeries = document.querySelector('#subtituloGeneroSeries');
 let subtituloGeneroPelis = document.querySelector('#subtituloGeneroPelis');
 
+let urlPeliculasValoradas = `https://api.themoviedb.org/3/movie/top_rated?api_key=${APIkey}`;
+
+/*automatizacion para el carrusel*/
+fetch(urlPeliculasValoradas)
+.then(function (response) {
+    return response.json()
+})
+.then(function (data) {
+    let carrusel = data.results;
+    console.log(carrusel);
+    let seccion_carrusel = document.querySelector("#ulCarrusel");
+    let contenido_carrusel = "";
+
+    for (let i = 0; i < 6; i++){
+        let pelicula = carrusel[i];
+        contenido_carrusel += `<a href="./pelicula.html?idPelicula=${pelicula.id}">
+                                    <li>
+                                        <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="Poster de ${pelicula.title}" width="400" height="600" alt="">
+                                    </li>
+                                </a>`
+    }
+    seccion_carrusel.innerHTML = contenido_carrusel;
+})
+.catch(function (error) {
+    console.log(error);
+})
+
+
+
 if (idGenero == null || idGenero == "" || idGenero == undefined) {
     alert("Debe ingresar un id de género correcto");
     tituloGenero.innerText= "El género buscado no está disponible";
