@@ -5,35 +5,29 @@ let urlSeriesPopulares = `https://api.themoviedb.org/3/tv/popular?api_key=${APIk
 let urlSeriesValoradas = `https://api.themoviedb.org/3/tv/top_rated?api_key=${APIkey}`;
 
 /*automatizacion para el carrusel*/
-/*fetch(urlPeliculasPopulares)
+fetch(urlPeliculasPopulares)
 .then(function (response) {
     return response.json()
 })
 .then(function (data) {
     let carrusel = data.results;
     console.log(carrusel);
-    let seccion_carrusel = document.querySelector(".carrusel");
+    let seccion_carrusel = document.querySelector("#ulCarrusel");
     let contenido_carrusel = "";
 
     for (let i = 0; i < 6; i++){
         let pelicula = carrusel[i];
-        contenido_carrusel += `<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-                                    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-                                        <li>
-                                            <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="Poster de ${pelicula.title} width="400" height="600" alt="">
-                                        </li>
-                                    </ul>
-
-                                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
-                                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-i
-                                </div>`
+        contenido_carrusel += `<li>
+                                    <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="Poster de ${pelicula.title} width="400" height="600" alt="">
+                                </li>
+                                `
     }
     seccion_carrusel.innerHTML = contenido_carrusel;
 })
 .catch(function (error) {
     
 })
-*/
+
 
 /*lo de peliculas*/
 fetch(urlPeliculasPopulares)
