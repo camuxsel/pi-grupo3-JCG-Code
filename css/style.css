@@ -60,7 +60,8 @@ h1, h2 {
     display: flex;
     height: auto;
     padding: 10% 15%;
-    margin: 5% 15%
+    margin: 5% 15%;
+    font-family: "Times new roman";
 }
 
 .contenedorInput {
@@ -324,6 +325,7 @@ footer{
     color: white;
     margin-bottom: 0;
     margin-left: 1.9%;
+    font-family: "Times new roman";
 }
 .sec-lista-art a{
     width: 30%;
@@ -355,10 +357,12 @@ footer{
 }
 .art-home h3{
     color: white;
+    font-family: "Times new Roman";
 }
 .art-home p{
     margin: 0;
     color: white;
+    font-family: "Times new Roman";
 }
 /* hasta aca*/
 
@@ -405,6 +409,7 @@ footer{
     .nombres{
         padding-bottom: 5px;
         width: fit-content;
+        font-family: "Times new Roman";
     }
     /*Main del index*/
     .sec-home a{
