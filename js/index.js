@@ -1,11 +1,12 @@
 
 let APIkey = "b7755d0a973ff1c1d329431ff2d89d36";
 let urlPeliculasPopulares = `https://api.themoviedb.org/3/movie/popular?api_key=${APIkey}`;
-let urlSeriesPopulares = `https://api.themoviedb.org/3/tv/popular?api_key=${APIkey}`
+let urlPeliculasValoradas = `https://api.themoviedb.org/3/movie/top_rated?api_key=${APIkey}`;
+let urlSeriesPopulares = `https://api.themoviedb.org/3/tv/popular?api_key=${APIkey}`;
 let urlSeriesValoradas = `https://api.themoviedb.org/3/tv/top_rated?api_key=${APIkey}`;
 
 /*automatizacion para el carrusel*/
-fetch(urlPeliculasPopulares)
+fetch(urlPeliculasValoradas)
 .then(function (response) {
     return response.json()
 })
@@ -25,7 +26,7 @@ fetch(urlPeliculasPopulares)
     seccion_carrusel.innerHTML = contenido_carrusel;
 })
 .catch(function (error) {
-    
+    console.log(error);
 })
 
 
