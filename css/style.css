@@ -313,6 +313,10 @@ footer{
     display: none;
 }
 
+#noExisteGenero{
+    display: none;
+}
+
 
 /*Main de index*/
 .sec-home h2{
