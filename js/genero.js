@@ -88,4 +88,5 @@ if (subtituloGeneroPelis.style.display == 'none' && subtituloGeneroSeries.style.
     noExisteGenero.style.display = 'flex';
     console.log('ok');
 };
+
 //por algun motivo no funciona :(
