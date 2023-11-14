@@ -17,7 +17,7 @@ fetch(urlPeliculasValoradas)
     let seccion_carrusel = document.querySelector("#ulCarrusel");
     let contenido_carrusel = "";
 
-    for (let i = 0; i < 6; i++){
+    for (let i = 0; i < carrusel.length; i++){
         let pelicula = carrusel[i];
         contenido_carrusel += `<a href="./pelicula.html?idPelicula=${pelicula.id}">
                                     <li>
