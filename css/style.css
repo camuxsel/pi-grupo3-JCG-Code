@@ -209,6 +209,10 @@ footer{
     color: lightblue;
 }
 
+#serieFavoritos:hover{
+    color: lightblue;
+}
+
 /* Propiedades de generos.html */
 .generos{
     color: white;
@@ -309,6 +313,11 @@ footer{
     display: none;
 }
 
+#noExisteGenero{
+    display: none;
+}
+
+
 /*Main de index*/
 .sec-home h2{
     color: white;
@@ -333,7 +342,7 @@ footer{
     align-items: center;
     background-color: #666;
     border: 3px solid rgb(57 8 103 / 42%);
-    height: 84vh;
+    height: 90vh;
     margin: 2% 0 2% 0;
 }
 .art-home img{
@@ -348,6 +357,7 @@ footer{
 }
 .art-home p{
     margin: 0;
+    color: white;
 }
 /* hasta aca*/
 
