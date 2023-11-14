@@ -83,7 +83,7 @@ subtituloGeneroSeries.style.display = 'none';
 console.log(subtituloGeneroSeries.style.display);
 console.log(subtituloGeneroPelis.style.display); */
 
-if(subtituloGeneroPelis.style.display == 'none' && subtituloGeneroSeries.style.display == 'none'){ // significa que no se encontraron resultados de ninguno de los dos, ambos se ocultaron --> el genero probablemente no existe o no esté disponible.
+if (subtituloGeneroPelis.style.display == 'none' && subtituloGeneroSeries.style.display == 'none'){ // significa que no se encontraron resultados de ninguno de los dos, ambos se ocultaron --> el genero probablemente no existe o no esté disponible.
     tituloGenero.style.display = 'none';
     noExisteGenero.style.display = 'flex';
     console.log('ok');
