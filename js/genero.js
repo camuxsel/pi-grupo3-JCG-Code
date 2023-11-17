@@ -3,9 +3,13 @@ let qsObj = new URLSearchParams(qs);
 let idGenero = qsObj.get("idGenero"); /* <= el id de la pelicula a buscar */
 let nombreGenero = qsObj.get("name"); /* <= el id de la pelicula a buscar */
 let APIkey = "b7755d0a973ff1c1d329431ff2d89d36";
+
 let tituloGenero = document.querySelector("#tituloGenero");
 let subtituloGeneroSeries = document.querySelector('#subtituloGeneroSeries');
 let subtituloGeneroPelis = document.querySelector('#subtituloGeneroPelis');
+
+let tituloPaginaGenero = document.querySelector('#titlePaginaGenero');
+tituloPaginaGenero.innerText = nombreGenero;
 
 let urlPeliculasValoradas = `https://api.themoviedb.org/3/movie/top_rated?api_key=${APIkey}`;
 
@@ -33,7 +37,6 @@ fetch(urlPeliculasValoradas)
 .catch(function (error) {
     console.log(error);
 })
-
 
 
 if (idGenero == null || idGenero == "" || idGenero == undefined) {
@@ -106,10 +109,8 @@ if (idGenero == null || idGenero == "" || idGenero == undefined) {
             };
             series_genero.innerHTML = contenido_s;
         };
-
     })
     .catch(function (error) {
         console.log(error);
     });
-
-}
+};
