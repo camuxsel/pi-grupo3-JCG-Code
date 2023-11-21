@@ -1,0 +1,4 @@
+Funcionalidades electivas:
+-Incorporación de carruseles
+-La posibilidad de agregar películas o series a “favoritos”
+- Ver favoritos

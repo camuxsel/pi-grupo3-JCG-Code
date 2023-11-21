@@ -1,3 +1,0 @@
-Codigo colores: 
- violeta: rgba(57, 8, 103, 0.762);
- gris: rgb(32, 32, 33);
